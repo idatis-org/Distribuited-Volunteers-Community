@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'v-wallet',
+  displayName: 'volunteers-community',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -9,7 +9,7 @@ export default {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../coverage/apps/v-wallet',
+  coverageDirectory: '../../coverage/apps/volunteers-community',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },

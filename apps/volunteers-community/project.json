@@ -1,25 +1,25 @@
 {
-  "name": "v-wallet",
+  "name": "volunteers-community",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/v-wallet/src",
+  "sourceRoot": "apps/volunteers-community/src",
   "prefix": "test",
   "targets": {
     "build": {
       "executor": "@nrwl/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/v-wallet",
-        "index": "apps/v-wallet/src/index.html",
-        "main": "apps/v-wallet/src/main.ts",
+        "outputPath": "dist/apps/volunteers-community",
+        "index": "apps/volunteers-community/src/index.html",
+        "main": "apps/volunteers-community/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/v-wallet/tsconfig.app.json",
+        "tsConfig": "apps/volunteers-community/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/v-wallet/src/favicon.ico", "apps/v-wallet/src/assets"],
-        "styles": ["apps/v-wallet/src/styles.scss"],
+        "assets": ["apps/volunteers-community/src/favicon.ico", "apps/volunteers-community/src/assets"],
+        "styles": ["apps/volunteers-community/src/styles.scss"],
         "scripts": [],
         "customWebpackConfig": {
-          "path": "apps/v-wallet/webpack.config.js"
+          "path": "apps/volunteers-community/webpack.config.js"
         },
         "commonChunk": false
       },
@@ -39,7 +39,7 @@
           ],
           "outputHashing": "all",
           "customWebpackConfig": {
-            "path": "apps/v-wallet/webpack.prod.config.js"
+            "path": "apps/volunteers-community/webpack.prod.config.js"
           }
         },
         "development": {
@@ -57,10 +57,10 @@
       "executor": "@nrwl/angular:webpack-dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "v-wallet:build:production"
+          "browserTarget": "volunteers-community:build:production"
         },
         "development": {
-          "browserTarget": "v-wallet:build:development"
+          "browserTarget": "volunteers-community:build:development"
         }
       },
       "defaultConfiguration": "development",
@@ -72,21 +72,21 @@
     "extract-i18n": {
       "executor": "ngx-build-plus:extract-i18n",
       "options": {
-        "browserTarget": "v-wallet:build",
-        "extraWebpackConfig": "apps/v-wallet/webpack.config.js"
+        "browserTarget": "volunteers-community:build",
+        "extraWebpackConfig": "apps/volunteers-community/webpack.config.js"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/v-wallet/**/*.ts", "apps/v-wallet/**/*.html"]
+        "lintFilePatterns": ["apps/volunteers-community/**/*.ts", "apps/volunteers-community/**/*.html"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/v-wallet/jest.config.ts",
+        "jestConfig": "apps/volunteers-community/jest.config.ts",
         "passWithNoTests": true
       }
     }
