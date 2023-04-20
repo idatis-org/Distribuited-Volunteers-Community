@@ -10,7 +10,8 @@
     "test": "nx test",
     "doc": "compodoc -p apps/%npm_config_project%/tsconfig.doc.json -d apps/%npm_config_project%/.documentation/",
     "build": "nx build",
-    "build:idatis-ui": "ng build --prod --project idatis && npm publish --access public ./dist/idatis && del dist"
+    "build:idatis-ui": "ng build --prod --project idatis && npm publish --access public ./dist/idatis && del dist",
+    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
   },
   "private": true,
   "dependencies": {

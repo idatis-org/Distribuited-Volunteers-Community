@@ -19,6 +19,15 @@ export const ROUTES = [
     })
     .then(m => m.AppModule)
   },
+  {
+    path: 'volunteer-register',
+     loadChildren: () => loadRemoteModule({
+       type: 'manifest',
+       remoteName: 'volunteer-register',
+       exposedModule: './Module'
+     })
+     .then(m => m.AppModule)
+   },
 ]
 
 @NgModule({
