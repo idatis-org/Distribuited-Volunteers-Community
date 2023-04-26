@@ -10,17 +10,22 @@
     "importHelpers": true,
     "target": "es2020",
     "module": "esnext",
-    "lib": [
-      "es2017",
-      "dom"
-    ],
+    "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@idatis/idatis-ui": ["dist/libs/idatis-ui"],
+      "@idatis/idatis-ui/loader": [
+        "dist/libs/idatis-ui/loader"
+      ],
+      "@idatis/idatis-ui/*": [
+        "dist/libs/idatis-ui/dist/components/*"
+      ],
+      "@idatis/idatis-ui-angular": [
+        "libs/idatis-ui-angular/src/index.ts"
+      ]
+    }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }

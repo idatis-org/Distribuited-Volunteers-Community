@@ -42,3 +42,4 @@ Thumbs.db
 .documentation
 
 .angular
+libs/idatis-ui-angular/**/generated
