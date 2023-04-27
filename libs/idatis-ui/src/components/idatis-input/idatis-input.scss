@@ -1,12 +1,15 @@
-button {
+input {
   width: 100%;
+  border: inherit;
+  border-bottom: 1px solid #59a5ba;
+  outline: inherit;
   box-sizing: border-box;
   margin: 0.5rem 0 0.5rem 0;
   padding: 0.5rem 1rem 0.5rem 1rem;
-  border-radius: 30px;
-  border: 0;
-  background-color: #59a5ba;
-  color: #f3f4f3;
   font-family: 'Poppins', sans-serif;
-  cursor: pointer;
+}
+
+label {
+  color: #59a5ba;
+  font-size: 0.8rem;
 }

@@ -5,10 +5,17 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { InputType } from "./components/idatis-input/models";
 export namespace Components {
     interface IdatisButton {
         "disabled": boolean;
         "text": string;
+    }
+    interface IdatisInput {
+        "disabled": boolean;
+        "placeholder": string;
+        "title": string;
+        "type": InputType;
     }
 }
 declare global {
@@ -18,8 +25,15 @@ declare global {
         prototype: HTMLIdatisButtonElement;
         new (): HTMLIdatisButtonElement;
     };
+    interface HTMLIdatisInputElement extends Components.IdatisInput, HTMLStencilElement {
+    }
+    var HTMLIdatisInputElement: {
+        prototype: HTMLIdatisInputElement;
+        new (): HTMLIdatisInputElement;
+    };
     interface HTMLElementTagNameMap {
         "idatis-button": HTMLIdatisButtonElement;
+        "idatis-input": HTMLIdatisInputElement;
     }
 }
 declare namespace LocalJSX {
@@ -27,8 +41,15 @@ declare namespace LocalJSX {
         "disabled"?: boolean;
         "text"?: string;
     }
+    interface IdatisInput {
+        "disabled"?: boolean;
+        "placeholder"?: string;
+        "title"?: string;
+        "type"?: InputType;
+    }
     interface IntrinsicElements {
         "idatis-button": IdatisButton;
+        "idatis-input": IdatisInput;
     }
 }
 export { LocalJSX as JSX };
@@ -36,6 +57,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "idatis-button": LocalJSX.IdatisButton & JSXBase.HTMLAttributes<HTMLIdatisButtonElement>;
+            "idatis-input": LocalJSX.IdatisInput & JSXBase.HTMLAttributes<HTMLIdatisInputElement>;
         }
     }
 }
