@@ -21,7 +21,12 @@
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/volunteers-community/src/favicon.ico",
-          "apps/volunteers-community/src/assets"
+          "apps/volunteers-community/src/assets",
+          {
+            "glob": "**/*",
+            "input": "apps/volunteer-register/src/assets",
+            "output": "assets"
+          }
         ],
         "styles": [
           "apps/volunteers-community/src/styles.scss"

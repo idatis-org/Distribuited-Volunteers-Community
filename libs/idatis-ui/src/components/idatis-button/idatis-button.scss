@@ -1,3 +1,5 @@
+@import '../../theme/colors.scss';
+
 button {
   width: 100%;
   box-sizing: border-box;
@@ -5,8 +7,12 @@ button {
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 30px;
   border: 0;
-  background-color: #59a5ba;
-  color: #f3f4f3;
+  background-color: $base-color;
+  color: $button-font-color;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: $base-color-dark-1;
 }

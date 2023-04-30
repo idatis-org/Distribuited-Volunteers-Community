@@ -20,7 +20,9 @@ export class IdatisInput {
       placeholder={this.placeholder}
       disabled={this.disabled}
       id={this.getIdWithoutSpaces(this.title)}
-      ></input>
+      >
+        <i class="fa-sharp fa-light fa-eye-slash"></i>
+      </input>
     </div>
   }
 

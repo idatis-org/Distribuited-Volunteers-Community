@@ -29,6 +29,8 @@
     "@idatis/idatis-ui": "^1.0.12",
     "@nrwl/angular": "15.2.1",
     "@nxext/stencil": "^15.7.0",
+    "lottie-web": "^5.11.0",
+    "ngx-lottie": "^10.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

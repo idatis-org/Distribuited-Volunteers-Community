@@ -1,12 +1,14 @@
 <div class="register-container">
+  <ng-lottie *ngIf="isBiggerThanTablet" height="100vh" [options]="animationOptions"></ng-lottie>
   <div class="register-form">
+    <h1>Create an account</h1>
     <div class="register-names">
       <idatis-input title="First Name" placeholder="First Name"></idatis-input>
       <idatis-input title="Last Name" placeholder="Last Name"></idatis-input>
     </div>
     <idatis-input title="Email" type="email" placeholder="Email"></idatis-input>
     <idatis-input title="Password" placeholder="Password" type="password"></idatis-input>
-    <idatis-button text="Sign Up"></idatis-button>
+    <idatis-button text="Create account"></idatis-button>
   </div>
 </div>
 

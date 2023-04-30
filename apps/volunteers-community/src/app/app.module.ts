@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
 
 export const ROUTES = [
   {
@@ -29,10 +31,15 @@ export const ROUTES = [
    },
 ]
 
+export function playerFactory() {
+  return player;
+}
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    //Until error related with libraries and microfrontends be fixed is needed also here
+    LottieModule.forRoot({player: playerFactory}),
     RouterModule.forRoot(ROUTES)
   ],
   providers: [],

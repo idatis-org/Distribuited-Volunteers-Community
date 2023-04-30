@@ -8,24 +8,7 @@
         "plugin:@nrwl/nx/angular",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
-      "rules": {
-        "@angular-eslint/directive-selector": [
-          "error",
-          {
-            "type": "attribute",
-            "prefix": "distribuitedVolunteersCommunity",
-            "style": "camelCase"
-          }
-        ],
-        "@angular-eslint/component-selector": [
-          "error",
-          {
-            "type": "element",
-            "prefix": "distribuited-volunteers-community",
-            "style": "kebab-case"
-          }
-        ]
-      }
+      "rules": {}
     },
     {
       "files": ["*.html"],

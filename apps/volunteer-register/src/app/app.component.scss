@@ -6,11 +6,15 @@
   justify-content: center;
 
   .register-form {
+    width:33%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin: 1rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
 
     .register-names {
       width: 100%;
@@ -27,6 +31,12 @@
     }
 
     idatis-button {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .register-form {
       width: 100%;
     }
   }
