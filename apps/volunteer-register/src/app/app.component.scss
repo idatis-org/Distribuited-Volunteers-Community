@@ -1,6 +1,5 @@
 .register-container {
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,6 +14,10 @@
     padding: 1rem;
     background-color: #ffffff;
     border-radius: 0.5rem;
+
+    .title {
+      text-align: center;
+    }
 
     .register-names {
       width: 100%;
@@ -33,9 +36,27 @@
     idatis-button {
       width: 100%;
     }
+
+  .separator-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 1rem 0;
+
+    .separator {
+      border: none;
+      border-bottom: 1px solid gainsboro;
+      width: 40%;
+       }
+
+     .separator-text {
+       padding: 0 0.5rem 0 0.5rem;
+       }
+     }
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     .register-form {
       width: 100%;
     }

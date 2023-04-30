@@ -17,6 +17,9 @@ export namespace Components {
         "title": string;
         "type": InputType;
     }
+    interface IdatisMenu {
+        "items": string[];
+    }
 }
 declare global {
     interface HTMLIdatisButtonElement extends Components.IdatisButton, HTMLStencilElement {
@@ -31,9 +34,16 @@ declare global {
         prototype: HTMLIdatisInputElement;
         new (): HTMLIdatisInputElement;
     };
+    interface HTMLIdatisMenuElement extends Components.IdatisMenu, HTMLStencilElement {
+    }
+    var HTMLIdatisMenuElement: {
+        prototype: HTMLIdatisMenuElement;
+        new (): HTMLIdatisMenuElement;
+    };
     interface HTMLElementTagNameMap {
         "idatis-button": HTMLIdatisButtonElement;
         "idatis-input": HTMLIdatisInputElement;
+        "idatis-menu": HTMLIdatisMenuElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,9 +57,13 @@ declare namespace LocalJSX {
         "title"?: string;
         "type"?: InputType;
     }
+    interface IdatisMenu {
+        "items"?: string[];
+    }
     interface IntrinsicElements {
         "idatis-button": IdatisButton;
         "idatis-input": IdatisInput;
+        "idatis-menu": IdatisMenu;
     }
 }
 export { LocalJSX as JSX };
@@ -58,6 +72,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "idatis-button": LocalJSX.IdatisButton & JSXBase.HTMLAttributes<HTMLIdatisButtonElement>;
             "idatis-input": LocalJSX.IdatisInput & JSXBase.HTMLAttributes<HTMLIdatisInputElement>;
+            "idatis-menu": LocalJSX.IdatisMenu & JSXBase.HTMLAttributes<HTMLIdatisMenuElement>;
         }
     }
 }

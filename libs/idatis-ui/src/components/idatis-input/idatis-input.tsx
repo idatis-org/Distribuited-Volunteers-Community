@@ -21,7 +21,6 @@ export class IdatisInput {
       disabled={this.disabled}
       id={this.getIdWithoutSpaces(this.title)}
       >
-        <i class="fa-sharp fa-light fa-eye-slash"></i>
       </input>
     </div>
   }

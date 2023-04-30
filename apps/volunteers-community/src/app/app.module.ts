@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { IdatisUiAngularModule } from '@idatis/idatis-ui-angular';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 
@@ -38,6 +39,7 @@ export function playerFactory() {
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    IdatisUiAngularModule,
     //Until error related with libraries and microfrontends be fixed is needed also here
     LottieModule.forRoot({player: playerFactory}),
     RouterModule.forRoot(ROUTES)
