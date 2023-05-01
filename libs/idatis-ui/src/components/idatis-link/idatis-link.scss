@@ -1,0 +1,10 @@
+@import '../../theme/colors.scss';
+
+a {
+  color: $base-color-light-1;
+  cursor: pointer;
+}
+
+a:active {
+  color: $base-color-light-1;
+}

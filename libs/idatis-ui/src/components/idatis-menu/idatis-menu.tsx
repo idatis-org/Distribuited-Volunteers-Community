@@ -5,7 +5,7 @@ import { Component, Prop, h } from '@stencil/core';
   styleUrl: 'idatis-menu.scss',
   shadow: true,
 })
-export class IdatisButton {
+export class IdatisMenu {
   @Prop() items: string[] = [];
 
   render() {
