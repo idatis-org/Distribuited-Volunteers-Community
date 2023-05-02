@@ -11,10 +11,13 @@ export namespace Components {
         "disabled": boolean;
         "text": string;
     }
+    interface IdatisIcon {
+        "icon": string;
+    }
     interface IdatisInput {
         "disabled": boolean;
+        "label": string;
         "placeholder": string;
-        "title": string;
         "type": InputType;
     }
     interface IdatisLink {
@@ -31,6 +34,12 @@ declare global {
     var HTMLIdatisButtonElement: {
         prototype: HTMLIdatisButtonElement;
         new (): HTMLIdatisButtonElement;
+    };
+    interface HTMLIdatisIconElement extends Components.IdatisIcon, HTMLStencilElement {
+    }
+    var HTMLIdatisIconElement: {
+        prototype: HTMLIdatisIconElement;
+        new (): HTMLIdatisIconElement;
     };
     interface HTMLIdatisInputElement extends Components.IdatisInput, HTMLStencilElement {
     }
@@ -52,6 +61,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "idatis-button": HTMLIdatisButtonElement;
+        "idatis-icon": HTMLIdatisIconElement;
         "idatis-input": HTMLIdatisInputElement;
         "idatis-link": HTMLIdatisLinkElement;
         "idatis-menu": HTMLIdatisMenuElement;
@@ -62,10 +72,13 @@ declare namespace LocalJSX {
         "disabled"?: boolean;
         "text"?: string;
     }
+    interface IdatisIcon {
+        "icon"?: string;
+    }
     interface IdatisInput {
         "disabled"?: boolean;
+        "label"?: string;
         "placeholder"?: string;
-        "title"?: string;
         "type"?: InputType;
     }
     interface IdatisLink {
@@ -77,6 +90,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "idatis-button": IdatisButton;
+        "idatis-icon": IdatisIcon;
         "idatis-input": IdatisInput;
         "idatis-link": IdatisLink;
         "idatis-menu": IdatisMenu;
@@ -87,6 +101,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "idatis-button": LocalJSX.IdatisButton & JSXBase.HTMLAttributes<HTMLIdatisButtonElement>;
+            "idatis-icon": LocalJSX.IdatisIcon & JSXBase.HTMLAttributes<HTMLIdatisIconElement>;
             "idatis-input": LocalJSX.IdatisInput & JSXBase.HTMLAttributes<HTMLIdatisInputElement>;
             "idatis-link": LocalJSX.IdatisLink & JSXBase.HTMLAttributes<HTMLIdatisLinkElement>;
             "idatis-menu": LocalJSX.IdatisMenu & JSXBase.HTMLAttributes<HTMLIdatisMenuElement>;

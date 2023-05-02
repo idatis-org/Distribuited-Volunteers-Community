@@ -4,19 +4,31 @@
   align-items: center;
   justify-content: center;
 
+  .social-icons {
+    width:100%;
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
   .register-form {
-    width:33%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin: 1rem;
-    padding: 1rem;
+    padding: 2rem;
     background-color: #FFFFFF;
     border-radius: 0.5rem;
 
     .title {
-      text-align: center;
+      width: 100%;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .login {
+      width: 100%;
     }
 
     .register-names {
@@ -47,7 +59,7 @@
     .separator {
       border: none;
       border-bottom: 1px solid #DCDCDC;
-      width: 40%;
+      width: 45%;
        }
 
      .separator-text {
@@ -56,9 +68,7 @@
      }
   }
 
-  @media (max-width: 1023px) {
-    .register-form {
-      width: 100%;
-    }
+  .register-footer {
+    margin-top: 0.5rem;
   }
 }

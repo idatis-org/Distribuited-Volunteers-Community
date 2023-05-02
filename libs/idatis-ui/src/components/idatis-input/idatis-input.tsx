@@ -10,16 +10,16 @@ export class IdatisInput {
   @Prop() disabled: boolean = false;
   @Prop() type: InputType = InputType.text
   @Prop() placeholder: string = ''
-  @Prop() title: string = ''
+  @Prop() label: string = ''
 
   render() {
     return <div>
-      <label htmlFor={this.getIdWithoutSpaces(this.title)}>{this.title}</label>
+      <label htmlFor={this.getIdWithoutSpaces(this.label)}>{this.label}</label>
       <input
       type={this.checkType(this.type)}
       placeholder={this.placeholder}
       disabled={this.disabled}
-      id={this.getIdWithoutSpaces(this.title)}
+      id={this.getIdWithoutSpaces(this.label)}
       >
       </input>
     </div>
