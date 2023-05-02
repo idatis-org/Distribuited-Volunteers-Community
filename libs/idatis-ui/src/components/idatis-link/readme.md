@@ -10,7 +10,6 @@
 | Property | Attribute | Description | Type     | Default |
 | -------- | --------- | ----------- | -------- | ------- |
 | `href`   | `href`    |             | `string` | `''`    |
-| `text`   | `text`    |             | `string` | `''`    |
 
 
 ----------------------------------------------

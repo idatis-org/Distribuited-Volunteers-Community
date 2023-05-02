@@ -1,4 +1,5 @@
 import { Component, Prop, getAssetPath, h } from '@stencil/core';
+import { IconSize } from './models';
 
 @Component({
   tag: 'idatis-icon',
@@ -8,8 +9,9 @@ import { Component, Prop, getAssetPath, h } from '@stencil/core';
 })
 export class IdatisIcon {
   @Prop() icon: string = '';
+  @Prop() size: IconSize = IconSize.medium;
 
   render() {
-    return <span class='idatis-icon'><img src={getAssetPath(`./assets/${this.icon}`)} alt={this.icon}></img></span>;
+    return <span class={'idatis-icon ' + this.size}><img src={getAssetPath(`./assets/icons/${this.icon}.png`)} alt={this.icon}></img></span>;
   }
 }

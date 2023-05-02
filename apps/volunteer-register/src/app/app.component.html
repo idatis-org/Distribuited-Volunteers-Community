@@ -2,11 +2,11 @@
   <ng-lottie *ngIf="isBiggerThanTablet" height="85vh" [options]="animationOptions"></ng-lottie>
   <div class="register-form">
     <div class="title">Create an account</div>
-    <div class="login">Already have an account? <idatis-link text="Login" href=""></idatis-link></div>
+    <div class="login">Already have an account? <idatis-link href="">Login</idatis-link></div>
     <div class="social-icons">
-      <idatis-icon icon="facebook"></idatis-icon>
-      <idatis-icon icon="google"></idatis-icon>
-      <idatis-icon icon="apple"></idatis-icon>
+      <idatis-link href="https://www.facebook.com/"><idatis-icon icon="facebook"></idatis-icon></idatis-link>
+      <idatis-link href="https://accounts.google.com/"><idatis-icon icon="google"></idatis-icon></idatis-link>
+      <idatis-link href="https://appleid.apple.com/sign-in"><idatis-icon icon="apple"></idatis-icon></idatis-link>
     </div>
     <div class="separator-container">
       <div class="separator"></div>
@@ -23,8 +23,8 @@
       <idatis-button text="Create account"></idatis-button>
     </form>
     <div class="register-footer">By registering, you agree with ours
-      <idatis-link text="Terms of Use" href=""></idatis-link> and
-      <idatis-link text="Privacy Policy" href=""></idatis-link>.</div>
+      <idatis-link href="">Terms of Use</idatis-link> and
+      <idatis-link href="">Privacy Policy</idatis-link>.</div>
   </div>
 </div>
 

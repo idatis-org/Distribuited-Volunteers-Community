@@ -6,14 +6,13 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class IdatisLink {
-  @Prop() text: string = '';
   @Prop() href: string = '';
 
   render() {
     return <a
       href={this.href}
       >
-      {this.text}
+      <slot></slot>
       </a>;
   }
 }

@@ -26,6 +26,11 @@
             "glob": "**/*",
             "input": "apps/volunteer-register/src/assets",
             "output": "assets"
+          },
+          {
+            "glob": "**/*",
+            "input": "dist/libs/idatis-ui/dist/idatis-ui/assets",
+            "output": "assets"
           }
         ],
         "styles": [

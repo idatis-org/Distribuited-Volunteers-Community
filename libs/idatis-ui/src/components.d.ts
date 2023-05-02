@@ -5,6 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { IconSize } from "./components/idatis-icon/models";
 import { InputType } from "./components/idatis-input/models";
 export namespace Components {
     interface IdatisButton {
@@ -13,6 +14,7 @@ export namespace Components {
     }
     interface IdatisIcon {
         "icon": string;
+        "size": IconSize;
     }
     interface IdatisInput {
         "disabled": boolean;
@@ -22,7 +24,6 @@ export namespace Components {
     }
     interface IdatisLink {
         "href": string;
-        "text": string;
     }
     interface IdatisMenu {
         "items": string[];
@@ -74,6 +75,7 @@ declare namespace LocalJSX {
     }
     interface IdatisIcon {
         "icon"?: string;
+        "size"?: IconSize;
     }
     interface IdatisInput {
         "disabled"?: boolean;
@@ -83,7 +85,6 @@ declare namespace LocalJSX {
     }
     interface IdatisLink {
         "href"?: string;
-        "text"?: string;
     }
     interface IdatisMenu {
         "items"?: string[];

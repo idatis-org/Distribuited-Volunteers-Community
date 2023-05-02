@@ -1,11 +1,26 @@
 @import '../../theme/colors.scss';
 
-span {
-  display: block;
+.idatis-icon {
+  display: inline-block;
+}
+
+.small {
   width: 24px;
   height: 24px;
 }
 
-.facebook {
-  background: url('../../assets/icons/facebook.png');
+.medium {
+  width: 36px;
+  height: 36px;
+}
+
+.large {
+  width: 48px;
+  height: 48px;
+}
+
+
+img {
+  width: 100%;
+  max-width: 100%;
 }
