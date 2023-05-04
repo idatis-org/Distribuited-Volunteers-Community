@@ -6,7 +6,7 @@ import { IdatisUiAngularModule } from '@idatis/idatis-ui-angular';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 
-const VOLUNTEER_REGISTER_ROUTES = [{
+const REGISTER_ROUTES = [{
   path: '',
   component: AppComponent
 }]
@@ -21,7 +21,7 @@ export function playerFactory() {
     CommonModule,
     LottieModule.forRoot({player: playerFactory}),
     IdatisUiAngularModule,
-    RouterModule.forChild(VOLUNTEER_REGISTER_ROUTES),
+    RouterModule.forChild(REGISTER_ROUTES),
   ],
   providers: [],
   bootstrap: [AppComponent],

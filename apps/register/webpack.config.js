@@ -1,9 +1,9 @@
 const { shareAll, withModuleFederationPlugin } = require('@angular-architects/module-federation/webpack');
 
 module.exports = withModuleFederationPlugin({
-  name: 'volunteer-register',
+  name: 'register',
   exposes: {
-    './Module': './apps/volunteer-register/src/app/app.module.ts',
+    './Module': './apps/register/src/app/app.module.ts',
   },
   shared: {
     ...shareAll({

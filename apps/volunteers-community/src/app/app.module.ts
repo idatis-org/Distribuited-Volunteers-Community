@@ -22,10 +22,19 @@ export const ROUTES = [
     .then(m => m.AppModule)
   },
   {
-    path: 'volunteer-register',
+    path: 'register',
      loadChildren: () => loadRemoteModule({
        type: 'manifest',
-       remoteName: 'volunteer-register',
+       remoteName: 'register',
+       exposedModule: './Module'
+     })
+     .then(m => m.AppModule)
+   },
+   {
+    path: 'login',
+     loadChildren: () => loadRemoteModule({
+       type: 'manifest',
+       remoteName: 'register',
        exposedModule: './Module'
      })
      .then(m => m.AppModule)

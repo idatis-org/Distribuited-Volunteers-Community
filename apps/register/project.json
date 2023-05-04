@@ -1,8 +1,8 @@
 {
-  "name": "volunteer-register",
+  "name": "register",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/volunteer-register/src",
+  "sourceRoot": "apps/register/src",
   "prefix": "Distribuited-Volunteers-Community",
   "targets": {
     "build": {
@@ -11,24 +11,24 @@
         "{options.outputPath}"
       ],
       "options": {
-        "outputPath": "dist/apps/volunteer-register",
-        "index": "apps/volunteer-register/src/index.html",
-        "main": "apps/volunteer-register/src/main.ts",
+        "outputPath": "dist/apps/register",
+        "index": "apps/register/src/index.html",
+        "main": "apps/register/src/main.ts",
         "polyfills": [
           "zone.js"
         ],
-        "tsConfig": "apps/volunteer-register/tsconfig.app.json",
+        "tsConfig": "apps/register/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/volunteer-register/src/favicon.ico",
-          "apps/volunteer-register/src/assets"
+          "apps/register/src/favicon.ico",
+          "apps/register/src/assets"
         ],
         "styles": [
-          "apps/volunteer-register/src/styles.scss"
+          "apps/register/src/styles.scss"
         ],
         "scripts": [],
         "customWebpackConfig": {
-          "path": "apps/volunteer-register/webpack.config.js"
+          "path": "apps/register/webpack.config.js"
         },
         "commonChunk": false
       },
@@ -48,7 +48,7 @@
           ],
           "outputHashing": "all",
           "customWebpackConfig": {
-            "path": "apps/volunteer-register/webpack.prod.config.js"
+            "path": "apps/register/webpack.prod.config.js"
           }
         },
         "development": {
@@ -66,10 +66,10 @@
       "executor": "@nrwl/angular:webpack-dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "volunteer-register:build:production"
+          "browserTarget": "register:build:production"
         },
         "development": {
-          "browserTarget": "volunteer-register:build:development"
+          "browserTarget": "register:build:development"
         }
       },
       "defaultConfiguration": "development",
@@ -81,16 +81,16 @@
     "extract-i18n": {
       "executor": "ngx-build-plus:extract-i18n",
       "options": {
-        "browserTarget": "volunteer-register:build",
-        "extraWebpackConfig": "apps/volunteer-register/webpack.config.js"
+        "browserTarget": "register:build",
+        "extraWebpackConfig": "apps/register/webpack.config.js"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "apps/volunteer-register/**/*.ts",
-          "apps/volunteer-register/**/*.html"
+          "apps/register/**/*.ts",
+          "apps/register/**/*.html"
         ]
       }
     },
@@ -100,7 +100,7 @@
         "{workspaceRoot}/coverage/{projectRoot}"
       ],
       "options": {
-        "jestConfig": "apps/volunteer-register/jest.config.ts",
+        "jestConfig": "apps/register/jest.config.ts",
         "passWithNoTests": true
       }
     }

@@ -5,15 +5,15 @@ import { distinctUntilChanged } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'volunteer-register',
+  selector: 'register',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit, OnDestroy {
-  animationOptions: AnimationOptions = {
+  public readonly animationOptions: AnimationOptions = {
     path: '/assets/animations/collaboration.json',
   }
-  isBiggerThanTablet = true;
+  public isBiggerThanTablet = true;
   private subscription: Subscription = new Subscription();
   private readonly breakpointObservable = this.breakpoint
   .observe(['(max-width: 1023px)'])

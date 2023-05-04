@@ -24,7 +24,7 @@
           "apps/volunteers-community/src/assets",
           {
             "glob": "**/*",
-            "input": "apps/volunteer-register/src/assets",
+            "input": "apps/register/src/assets",
             "output": "assets"
           },
           {
